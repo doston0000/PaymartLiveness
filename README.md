@@ -43,10 +43,12 @@ public class PaymartColors {
     public static var buttonDisable = #colorLiteral(red: 0.3843137255, green: 0.3843137255, blue: 0.3843137255, alpha: 1).withAlphaComponent(0.5)  // 626262
     public static var background = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) // FFFFFF
     public static var calendarColor = #colorLiteral(red: 1, green: 0.462745098, blue: 0.262745098, alpha: 1) // FF7643
+    public static var textFieldbackground = #colorLiteral(red: 0.9647058824, green: 0.9647058824, blue: 0.9647058824, alpha: 1) //F6F6F6
     public static var labelBlack = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 1) // 1E1E1E
     public static var loaderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1) // FFFFFF
     public static var livenessSuccess = #colorLiteral(red: 0.3254901961, green: 0.8588235294, blue: 0.5490196078, alpha: 1) // 53DB8C
     public static var livenessDefault = #colorLiteral(red: 1, green: 0.462745098, blue: 0.262745098, alpha: 1) // FF7643
+    public static var navIconColor = #colorLiteral(red: 0.1176470588, green: 0.1176470588, blue: 0.1176470588, alpha: 1) // 1E1E1E
 }
 ```
 
@@ -65,6 +67,10 @@ withDelegate delegate: PaymartMyId.PaymartFaceMatchDelegate? = nil,
 configuration: PaymartMyId.PaymartConfiguration? = nil,
 token: String) -> PaymartMyId.PaymartMyIdViewController
 ```
+Set endpoint by using ```PaymartAPIConfig```, available endpoints ```dev``` ```test``` ```production```, by default its in test mode
+```swift
+PaymartAPIConfig.base = .production
+```
 
 Full example 
 ```swift
@@ -81,6 +87,9 @@ class ViewController: UIViewController, PaymartFaceMatchDelegate {
         //set locale
         PaymartConfiguration.locale = "uz"
 
+        //set endpoint
+        PaymartAPIConfig.base = .production
+        
         //change some ui color
         PaymartColors.calendarColor = .red
 
