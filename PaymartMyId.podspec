@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|  
     s.name              = 'PaymartMyId' # Name for your pod
-    s.version           = '0.0.4'
+    s.version           = '0.0.5'
     s.summary           = 'Paymart Liveness integration'
     s.homepage          = 'https://github.com/doston0000/PaymartLiveness.git'
 
